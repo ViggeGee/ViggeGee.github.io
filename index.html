@@ -730,6 +730,74 @@
     font-size: 0.8rem;
 }
 
+.project-media-tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.media-tab {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: var(--text);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.media-tab.active {
+    color: var(--accent);
+}
+
+.media-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent);
+}
+
+.media-content {
+    display: none;
+}
+
+.media-content.active {
+    display: block;
+}
+
+.project-videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video-item h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border: 2px solid var(--secondary);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .featured-projects-grid {
@@ -815,7 +883,7 @@
                 
                 <div class="featured-project-card" data-project="game2">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Trombone Champ">
+                        <img src="Images/tromboneChamp/header.png" alt="Trombone Champ">
                     </div>
                     <div class="project-info">
                         <h3>Trombone Champ</h3>
@@ -835,7 +903,7 @@
                 <!-- Row 2 -->
                 <div class="featured-project-card" data-project="game3">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Jolly Frenzy Games">
+                        <img src="Images/JollyFrenzyGames/header.png" alt="Jolly Frenzy Games">
                     </div>
                     <div class="project-info">
                         <h3>Jolly Frenzy Games</h3>
@@ -1018,123 +1086,128 @@ window.addEventListener('click', (e) => {
 // Open Project Modal
 function openProjectModal(projectId) {
     const project = projectData[projectId];
-            
-            if (!project) {
-                // For demo purposes, show a placeholder for projects without data
-                modalContent.innerHTML = `
-                    <div class="modal-header">
-                        <h2>PROJECT DETAILS</h2>
-                        <p>This is a placeholder for project details. Replace with your actual game information.</p>
+    
+    if (!project) {
+        // For demo purposes, show a placeholder
+        // ... (existing placeholder code)
+    } else {
+        // Create gallery items HTML
+        let galleryHTML = '';
+        if (project.images && project.images.length > 0) {
+            project.images.forEach(img => {
+                galleryHTML += `
+                    <div class="gallery-item">
+                        <img src="${img}" alt="Project Screenshot">
                     </div>
-                    <div class="modal-body">
-                        <div class="project-description">
-                            <p>Add detailed information about this game, including the concept, gameplay mechanics, development process, and your role in its creation.</p>
-                            <p>Include information about any challenges faced and how you overcame them.</p>
-                        </div>
-                        
-                        <h3>SCREENSHOTS</h3>
-                        <div class="project-gallery">
-                            <div class="gallery-item">
-                                <img src="/api/placeholder/600/400" alt="Screenshot 1">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="/api/placeholder/600/400" alt="Screenshot 2">
-                            </div>
-                        </div>
-                        
-                        <h3>PROJECT DETAILS</h3>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <h4>DEVELOPMENT TIME</h4>
-                                <p>Time period</p>
-                            </div>
-                            <div class="detail-item">
-                                <h4>ENGINE</h4>
-                                <p>Game engine used</p>
-                            </div>
-                            <div class="detail-item">
-                                <h4>PLATFORM</h4>
-                                <p>Target platforms</p>
-                            </div>
-                            <div class="detail-item">
-                                <h4>ROLE</h4>
-                                <p>Your role in the project</p>
-                            </div>
-                        </div>
-                        
-                        <h3>LINKS</h3>
-                        <div class="project-links">
-                            <a href="#" class="pixel-btn">PLAY GAME</a>
-                            <a href="#" class="pixel-btn">VIEW SOURCE</a>
+                `;
+            });
+        }
+        
+        // Create video items HTML
+        let videoHTML = '';
+        if (project.videos && project.videos.length > 0) {
+            project.videos.forEach(video => {
+                videoHTML += `
+                    <div class="video-item">
+                        <h4>${video.title}</h4>
+                        <div class="video-container">
+                            <iframe 
+                                width="100%" 
+                                height="315" 
+                                src="${video.url}" 
+                                title="${video.title}"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
                         </div>
                     </div>
                 `;
-            } else {
-                // Create gallery items HTML
-                let galleryHTML = '';
-                if (project.images && project.images.length > 0) {
-                    project.images.forEach(img => {
-                        galleryHTML += `
-                            <div class="gallery-item">
-                                <img src="${img}" alt="Project Screenshot">
-                            </div>
-                        `;
-                    });
-                }
-                
-                // Create details HTML
-                let detailsHTML = '';
-                if (project.details && project.details.length > 0) {
-                    project.details.forEach(detail => {
-                        detailsHTML += `
-                            <div class="detail-item">
-                                <h4>${detail.title}</h4>
-                                <p>${detail.content}</p>
-                            </div>
-                        `;
-                    });
-                }
-                
-                // Create links HTML
-                let linksHTML = '';
-                if (project.links && project.links.length > 0) {
-                    project.links.forEach(link => {
-                        linksHTML += `
-                            <a href="${link.url}" class="pixel-btn" target="_blank">${link.text}</a>
-                        `;
-                    });
-                }
-                
-                // Populate modal with project data
-                modalContent.innerHTML = `
-                    <div class="modal-header">
-                        <h2>${project.title}</h2>
-                        <h3>${project.subtitle}</h3>
-                    </div>
-                    <div class="modal-body">
-                        <div class="project-description">${project.description}</div>
-                        
-                        <h3>SCREENSHOTS</h3>
-                        <div class="project-gallery">${galleryHTML}</div>
-                        
-                        <h3>PROJECT DETAILS</h3>
-                        <div class="project-details">${detailsHTML}</div>
-                        
-                        <h3>LINKS</h3>
-                        <div class="project-links">${linksHTML}</div>
+            });
+        }
+        
+        // Create details HTML
+        let detailsHTML = '';
+        if (project.details && project.details.length > 0) {
+            project.details.forEach(detail => {
+                detailsHTML += `
+                    <div class="detail-item">
+                        <h4>${detail.title}</h4>
+                        <p>${detail.content}</p>
                     </div>
                 `;
-            }
-            
-           // Show and animate modal
+            });
+        }
+        
+        // Create links HTML
+        let linksHTML = '';
+        if (project.links && project.links.length > 0) {
+            project.links.forEach(link => {
+                linksHTML += `
+                    <a href="${link.url}" class="pixel-btn" target="_blank">${link.text}</a>
+                `;
+            });
+        }
+        
+        // Populate modal with project data, including the new video section
+        modalContent.innerHTML = `
+            <div class="modal-header">
+                <h2>${project.title}</h2>
+                <h3>${project.subtitle}</h3>
+            </div>
+            <div class="modal-body">
+                <div class="project-description">${project.description}</div>
+                
+                <div class="project-media-tabs">
+                    <button class="media-tab active" data-tab="screenshots">SCREENSHOTS</button>
+                    <button class="media-tab" data-tab="videos">VIDEOS</button>
+                </div>
+                
+                <div class="media-content active" id="screenshots-content">
+                    <div class="project-gallery">${galleryHTML}</div>
+                </div>
+                
+                <div class="media-content" id="videos-content">
+                    <div class="project-videos">${videoHTML || '<p>No videos available for this project.</p>'}</div>
+                </div>
+                
+                <h3>PROJECT DETAILS</h3>
+                <div class="project-details">${detailsHTML}</div>
+                
+                <h3>LINKS</h3>
+                <div class="project-links">${linksHTML}</div>
+            </div>
+        `;
+        
+        // Add tab switching functionality
+        const tabs = document.querySelectorAll('.media-tab');
+        const contents = document.querySelectorAll('.media-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Show corresponding content
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(`${tabName}-content`).classList.add('active');
+            });
+        });
+    }
+    
+    // Show and animate modal
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Trigger animation (add a small delay to ensure display:block has taken effect)
+    // Trigger animation
     setTimeout(() => {
         modal.classList.add('active');
     }, 10);
-        }
+}
         
         // Sample Project Data (Replace with your actual project data)
         const projectData = {
@@ -1165,6 +1238,12 @@ function openProjectModal(projectId) {
                     'Images/Chained2Violence/imageTwo.jpg',
                     'Images/Chained2Violence/imageThree.jpg'
                 ],
+                videos: [
+    {
+        title: 'Game Trailer',
+        url: 'https://www.youtube.com/watch?v=EhS2IWsT0LY'
+    }
+],
                 details: [
                     {
                         title: 'Development Time',
