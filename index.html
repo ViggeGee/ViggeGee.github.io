@@ -623,7 +623,7 @@
                 <a href="#" class="logo">Victor Gustafsson</a>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#featured">Featured Games</a></li>
+                    <li><a href="#featured">Games</a></li>
                     <li><a href="#smaller">Smaller Games</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -674,7 +674,7 @@
                 <!-- Game project cards will go here. Below is a template. -->
                 <div class="project-card" data-project="game1">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Game 1">
+                        <img src="Images/Chained2Violence/header.jpg" alt="Game 1">
                     </div>
                     <div class="project-info">
                         <h3>Chained 2 Violence</h3>
@@ -969,7 +969,7 @@ function openProjectModal(projectId) {
                 modalContent.innerHTML = `
                     <div class="modal-header">
                         <h2>${project.title}</h2>
-                        <p>${project.subtitle}</p>
+                        <h3>${project.subtitle}</h3>
                     </div>
                     <div class="modal-body">
                         <div class="project-description">${project.description}</div>
@@ -999,44 +999,54 @@ function openProjectModal(projectId) {
         // Sample Project Data (Replace with your actual project data)
         const projectData = {
             'game1': {
-                title: 'GAME TITLE 1',
-                subtitle: 'Action Adventure',
+                title: 'Chained 2 Violence',
+                subtitle: '2 Player Arena Survival',
                 description: `
-                    <p>Detailed game description goes here. Describe the concept, gameplay, and your role in development.</p>
-                    <p>Add more paragraphs as needed to fully explain the project.</p>
+                    <p>
+                        Chained 2 Violence is my so far biggest game. 
+                        I made it together with a team of 7 for our final University Project.
+                        It's a 2 player co-op arena game similar to games like Vampire Survivor 
+                        but with the twist of you being chained together with your friend!
+                    </p>
+                    <br></br>
+                    <h3>My Part</h3>
+                    <p>
+                        My primary responsibility was to implement the Procedurally generated content of the game.
+                        I made every enemy be generated visually unique with different constraints based on the enemy type and what the current "era" of the game it is.
+                        This resulted in around a million uniquely looking enemies. 
+                        The most difficult part about this was to allow the enemies to always look different but still feel cohesive to the game and easy to understand what enemy type it belonged to
+                    </p>
+                    <p>
+                        I also created all the arenas for the game as well as the majority of the visual effects, shaders, etc.
+                    </p>
                 `,
                 images: [
-                    '/api/placeholder/600/400',
-                    '/api/placeholder/600/400',
-                    '/api/placeholder/600/400',
-                    '/api/placeholder/600/400'
+                    'Images/Chained2Violence/imageOne.jpg',
+                    'Images/Chained2Violence/imageTwo.jpg',
+                    'Images/Chained2Violence/imageThree.jpg'
                 ],
                 details: [
                     {
                         title: 'Development Time',
-                        content: 'X months'
+                        content: '10 Weeks'
                     },
                     {
                         title: 'Engine',
-                        content: 'Game Engine'
+                        content: 'Unity, C#'
                     },
                     {
                         title: 'Platform',
-                        content: 'Platforms'
+                        content: 'PC, Steam Deck'
                     },
                     {
                         title: 'Role',
-                        content: 'Your Role'
+                        content: 'Game Programmer'
                     }
                 ],
                 links: [
                     {
                         text: 'PLAY GAME',
-                        url: '#'
-                    },
-                    {
-                        text: 'VIEW SOURCE',
-                        url: '#'
+                        url: 'https://store.steampowered.com/app/3307300/Chained_2_Violence/'
                     }
                 ]
             },
