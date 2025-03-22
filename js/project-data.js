@@ -62,7 +62,7 @@ const projectData = {
         details: [
             {
                 title: 'Team Size',
-                content: '7 People'
+                content: '8 People'
             },
             {
                 title: 'Development Time',
@@ -92,17 +92,26 @@ const projectData = {
         title: 'Trombone Champ',
         subtitle: 'Rhythm Game',
         description: `
-            <p>A retro rhythm game inspired by Trombone Champ with procedurally generated notes from MIDI files.</p>
+            <p>A retro rhythm game inspired by Trombone Champ with procedurally generated notes from MIDI files allowing any MIDI song to be introduced to the game with just a few clicks!</p>
             <p>Played using a Nintendo Switch Joy-Con controller for a more immersive experience.</p>
+            <p>The game was a part of a course where we needed to develop the game with certain constraints in mind. This games constraint was "alternate controllers" hence the joy-con!</p>
+            <br></br>
+            <h3>My Part</h3>
+            <p>
+                This projects division of labour worked very fluidly. 
+                I worked on a lot of different areas, though I found myself mostly helping with the MIDI generation of the notes.
+                I also did a lot of the visual aspects of the game, which surprisingly was very closely related to the MIDI system that we created.
+                For example, i implemented a system that calculated the beat of the current song and if the player hit a high streak the screen would then pulsate on beat to the song! 
+            </p>
         `,
         images: [
-            'images/tromboneChamp/screenshot1.png',
-            'images/tromboneChamp/screenshot2.png'
+            'images/tromboneChamp/imageOne.png'
+            
         ],
         videos: [
             {
                 title: 'Gameplay Demo',
-                url: 'https://www.youtube.com/embed/YOUR_VIDEO_ID'
+                url: 'images/tromboneChamp/videoOne.gif'
             }
         ],
         details: [
@@ -112,7 +121,7 @@ const projectData = {
             },
             {
                 title: 'Development Time',
-                content: '6 Weeks'
+                content: '1 Week'
             },
             {
                 title: 'Engine',
@@ -124,13 +133,13 @@ const projectData = {
             },
             {
                 title: 'Role',
-                content: 'Gameplay Programmer'
+                content: 'Game Designer & Programmer'
             }
         ],
         links: [
             {
                 text: 'PLAY GAME',
-                url: '#'
+                url: 'https://viggegee.itch.io/tronbone-champ'
             }
         ]
     },
@@ -138,17 +147,25 @@ const projectData = {
         title: 'Jolly Frenzy Games',
         subtitle: 'Party Game',
         description: `
-            <p>A party game from 2-4 players where you play various fun minigames.</p>
-            <p>The game was a project made in the System Development course in Malmö University by me and 4 other students. This was my first complete game.</p>
+            <p>Jolly Frenzy Games is a party game for 2-4 players where you play various of fun minigames.</p>
+            <p>The game was a project made in the System Development course in Malmö University by me and 4 other students. This was my first complete game that I made.
+            It was also my first ever group project within Data Science</p>
+            <br></br>
+            <h3>My Part</h3>
+            <p>
+            I was responsible for the multiplayer of this game. Since this was my first ever big game this was needless to say a big task! And with it came a lot of issues
+            But I got it working in the end and also managed to complete a couple of minigames for the game as well!
+            This project was very educational for me and I think it was the game that really ignited the spark on what game development is for me today. 
+            </p>
         `,
         images: [
-            'images/JollyFrenzyGames/screenshot1.png',
-            'images/JollyFrenzyGames/screenshot2.png'
+            'images/JollyFrenzyGames/ImageOne.png',
+            'images/JollyFrenzyGames/ImageTwo.png'
         ],
         videos: [
             {
-                title: 'Gameplay Overview',
-                url: 'https://www.youtube.com/embed/YOUR_VIDEO_ID'
+                title: 'Trailer',
+                url: 'https://www.youtube.com/embed/KDZJ6IHWSmI?si=8WkMJWyn4W9-kwfA'
             }
         ],
         details: [
@@ -170,13 +187,13 @@ const projectData = {
             },
             {
                 title: 'Role',
-                content: 'Developer'
+                content: 'Multiplayer Developer'
             }
         ],
         links: [
             {
                 text: 'PLAY GAME',
-                url: '#'
+                url: 'https://viggegee.itch.io/jolly-frenzy-games'
             }
         ]
     },
