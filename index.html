@@ -240,7 +240,7 @@
             position: absolute;
             top: -10px;
             left: -10px;
-            right: -10px;
+            right: -5px;
             bottom: -10px;
             border: 2px dashed var(--secondary);
             z-index: -1;
@@ -248,7 +248,8 @@
         
         .about-image img {
             width: 100%;
-            display: block;
+            height: 100%;
+            display:block;
         }
         
         .about-content p {
@@ -614,6 +615,127 @@
                 margin: 2rem auto;
             }
         }
+        .featured-projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.featured-project-card {
+    background-color: var(--dark);
+    border: 4px solid var(--primary);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.featured-project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.featured-project-card .project-image {
+    height: 100%;
+}
+
+.featured-project-card .project-info {
+    padding: 2rem;
+}
+
+.project-metadata {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--medium);
+    padding: 0.35rem 0.75rem;
+    border-radius: 2px;
+}
+
+.metadata-item i {
+    color: var(--light-accent);
+}
+
+/* Keep the original projects-grid for smaller games */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .featured-project-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-project-card .project-image {
+        height: 200px;
+    }
+}
+.featured-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.featured-project-card {
+    background-color: var(--dark);
+    border: 4px solid var(--primary);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.featured-project-card .project-image {
+    width: 100%;
+    height: 200px;
+}
+
+.featured-project-card .project-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-project-card .project-info p {
+    flex-grow: 1;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tag i {
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .featured-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
@@ -670,63 +792,81 @@
         
         <section id="featured" class="fade-in">
             <h2>FEATURED GAMES</h2>
-            <div class="projects-grid">
-                <!-- Game project cards will go here. Below is a template. -->
-                <div class="project-card" data-project="game1">
+            <div class="featured-projects-grid">
+                <!-- Row 1 -->
+                <div class="featured-project-card" data-project="game1">
                     <div class="project-image">
-                        <img src="Images/Chained2Violence/header.jpg" alt="Game 1">
+                        <img src="Images/Chained2Violence/header.jpg" alt="Chained 2 Violence">
                     </div>
                     <div class="project-info">
                         <h3>Chained 2 Violence</h3>
                         <p>
-                            Chained 2 Violence is my so far biggest game. 
-                            I made it together with a team of 7 for our final University Project.
-                            It's a 2 player co-op arena game similar to games like Vampire Survivor 
+                            Chained 2 Violence is my biggest game yet. A 2 player co-op arena game similar to Vampire Survivor 
                             but with the twist of you being chained together with your friend!
                         </p>
                         <div class="project-tags">
-                            <span class="tag">UNITY</span>
-                            <span class="tag">Multiplayer</span>
+                            <span class="tag"><i class="fas fa-code"></i> UNITY</span>
+                            <span class="tag"><i class="fas fa-gamepad"></i> Multiplayer</span>
+                            <span class="tag"><i class="fas fa-users"></i> Team: 7</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 10 Weeks</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card" data-project="game2">
+                <div class="featured-project-card" data-project="game2">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Game 2">
+                        <img src="/api/placeholder/400/320" alt="Trombone Champ">
                     </div>
                     <div class="project-info">
-                        <h3>Tronbone Champ</h3>
+                        <h3>Trombone Champ</h3>
                         <p>
-                            A retro rhythm game heavily inspired by the game Trombone champ. 
-                            The notes are procedurally generated by reading music data from MIDI files. 
-                            Allowing super easy implementation of more songs.
-                            The game was a school project where the assignment was to use an additional sensor. 
-                            In our case this was to play the game with a Nintendo Switch Joy-Con
-                           </p>
+                            A retro rhythm game inspired by Trombone Champ with procedurally generated notes from MIDI files.
+                            Played using a Nintendo Switch Joy-Con controller.
+                        </p>
                         <div class="project-tags">
-                            <span class="tag">UNITY</span>
-                            <span class="tag">Rhythm</span>
+                            <span class="tag"><i class="fas fa-code"></i> UNITY</span>
+                            <span class="tag"><i class="fas fa-gamepad"></i> Rhythm</span>
+                            <span class="tag"><i class="fas fa-users"></i> Team: 4</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 6 Weeks</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card" data-project="game3">
+                <!-- Row 2 -->
+                <div class="featured-project-card" data-project="game3">
                     <div class="project-image">
-                        <img src="/api/placeholder/400/320" alt="Game 3">
+                        <img src="/api/placeholder/400/320" alt="Jolly Frenzy Games">
                     </div>
                     <div class="project-info">
                         <h3>Jolly Frenzy Games</h3>
                         <p>
-                            A party game from 2-4 players where you play various fun minigames. 
-                            The game was a project made in the System Development course in Malmö University by me and 4 other students. 
-                            This was my first complete game
-                            
-                            </p>
+                            A party game from 2-4 players with various fun minigames. Made in the System Development 
+                            course at Malmö University. My first complete game.
+                        </p>
                         <div class="project-tags">
-                            <span class="tag">UNITY</span>
-                            <span class="tag">Multiplayer</span>
-                            <span class="tag">Party</span>
+                            <span class="tag"><i class="fas fa-code"></i> UNITY</span>
+                            <span class="tag"><i class="fas fa-gamepad"></i> Party</span>
+                            <span class="tag"><i class="fas fa-users"></i> Team: 5</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 8 Weeks</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured-project-card" data-project="game4">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/320" alt="RPG Adventure">
+                    </div>
+                    <div class="project-info">
+                        <h3>RPG Adventure</h3>
+                        <p>
+                            An action RPG featuring character customization, dynamic combat, and procedurally 
+                            generated dungeons.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fas fa-code"></i> UNITY</span>
+                            <span class="tag"><i class="fas fa-gamepad"></i> RPG</span>
+                            <span class="tag"><i class="fas fa-users"></i> Team: 6</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 12 Weeks</span>
                         </div>
                     </div>
                 </div>
@@ -835,7 +975,7 @@
         // DOM Elements
         const menuToggle = document.querySelector('.burger');
         const navLinks = document.querySelector('.nav-links');
-        const projectCards = document.querySelectorAll('.project-card');
+        const projectCards = document.querySelectorAll('.project-card, .featured-project-card');
         const modal = document.getElementById('projectModal');
         const modalContent = document.getElementById('modalContent');
         const closeModal = document.querySelector('.close-modal');
