@@ -58,10 +58,10 @@ function openProjectModal(projectId) {
                 <h3>LINKS</h3>
                 <div class="project-links">
                     <a href="#" class="pixel-btn">PLAY GAME</a>
-                    <a href="#" class="pixel-btn">VIEW SOURCE</a>
-                </div>
-            </div>
-        `;
+                    </div>
+                    </div>
+                    `;
+                  //upp 3 rader om du vill ha source code med:   <a href="#" class="pixel-btn">VIEW SOURCE</a>
     } else {
         // Create gallery items HTML
         let galleryHTML = '';
@@ -139,7 +139,7 @@ function openProjectModal(projectId) {
                 </div>
                 
                 <div class="media-content active" id="screenshots-content">
-                    <div class="project-gallery">${galleryHTML}</div>
+                    <div class="project-gallery">${galleryHTML || '<p>No images available for this project.</p>'}</div>
                 </div>
                 
                 <div class="media-content" id="videos-content">

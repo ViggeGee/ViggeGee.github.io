@@ -256,16 +256,26 @@ const projectData = {
             }
         ]
     },
-    'smallgame1': {
-        title: 'GAME JAM TITLE 1',
-        subtitle: 'Game Jam Entry',
+    'Hacker-XPerience': {
+        title: 'Hacker-XPerience',
+        subtitle: 'Game Jam Entry 2024',
         description: `
-            <p>Detailed game description goes here.</p>
-            <p>Add more paragraphs as needed.</p>
+            <p>
+            A short puzzle game that simulates being a hacker in the early 2000s.
+            Made during the "Game Lab Jam HT23"
+            </p>
+            <br></br>
+            <h3>My Part</h3>
+            <p>
+            I was responsible for creating the "operative system" of the game. Which in this context meant to create the different apps or levels,
+            which the player needed to run to progress in the game. It was really fun for me to work on this since it is so unconventional and outside of the box.
+            It was a great challange to make this work fluently but still give the player the feeling of them actually sitting in front of an old computer.
+            </p>
         `,
         images: [
-            '/api/placeholder/600/400',
-            '/api/placeholder/600/400'
+            'images/HackerXPerience/imageOne.png',
+            'images/HackerXPerience/imageTwo.png',
+            'images/HackerXPerience/imageThree.png'
         ],
         details: [
             {
@@ -274,23 +284,119 @@ const projectData = {
             },
             {
                 title: 'Engine',
-                content: 'Game Engine'
+                content: 'Unity'
             },
             {
                 title: 'Theme',
-                content: 'Jam Theme'
+                content: 'You are the villain'
             },
             {
                 title: 'Role',
-                content: 'Your Role'
+                content: 'Game Programmer'
             }
         ],
         links: [
             {
                 text: 'PLAY GAME',
-                url: '#'
+                url: 'https://kim-svedberg.itch.io/hacker-xperience'
             }
         ]
+    },
+    'Magnets': {
+        title: 'Magnets',
+        subtitle: 'Game Jam Entry 2022',
+        description: `
+            <p>
+            A short physics based platformer game made during the "Game Lab Jam VT22". The theme of the Jam was something along the lines with"unconventional forces"
+            So we made a game where you as the player plays as a magnet in a platformer game, and you have the ability to switch the force that your magnet have
+            So you could attract and repulse to other magnets to complete the obstacle course.   
+            </p>
+            <br></br>
+            <h3>My Part</h3>
+            <p>
+            This was the first game that I worked on, so I didnt take on too big responsibilities here. My primary goal was to learn Unity.
+            I hence took on the task of creating the tutorial of the game. I also added checkpoints, powerpellets and the player controller of the game.
+            It was a really fun experience and it made me really excited about what game development had to offer!
+            </p>
+        `,
+        images: [
+            
+        ],
+        details: [
+            {
+                title: 'Jam Duration',
+                content: '48 hours'
+            },
+            {
+                title: 'Engine',
+                content: 'Unity'
+            },
+            {
+                title: 'Theme',
+                content: 'Unconvnetional Forces'
+            },
+            {
+                title: 'Role',
+                content: 'Game Programmer'
+            }
+        ],
+        links: [
+            {
+                text: 'PLAY GAME',
+                url: 'https://viggegee.itch.io/magnets'
+            }
+        ]
+        
     }
+    /*
+    'Janitor Life': {
+        title: 'Janitor Life',
+        subtitle: 'Game Jam Entry 2024',
+        description: `
+            <p>
+                You are a normal Janitor that works during closed office hours. 
+                During this time a crazy amount of thieves come and try to steal the offices computers. 
+                It's your job to make these thieves dissapear with your trustful mop. 
+                If you don't succeed with this you will get fired for stolen office property!
+                This game was made during a week long GameJam along with two other team members. The theme of the GameJam was "Unsung Heroes
+            </p>
+            <br></br>
+            <h3>My Part</h3>
+            <p>
+            During this game I primarily worked on the player. Trying to create a player-controller that worked very fluently and felt good.
+            Aside from that I did a lot of work with animations, learning about key-handles and root motion.
+            Lastly I did the UI of the game and some effects, just to add the juice of the game.
+            </p>
+        `,
+        images: [
+            
+        ],
+        details: [
+            {
+                title: 'Jam Duration',
+                content: '48 hours'
+            },
+            {
+                title: 'Engine',
+                content: 'Unity'
+            },
+            {
+                title: 'Theme',
+                content: 'Unsung Heroes'
+            },
+            {
+                title: 'Role',
+                content: 'Gameplay programmer, animations & UI'
+            }
+        ],
+        links: [
+            {
+                text: 'PLAY GAME',
+                url: 'https://viggegee.itch.io/janitor-life'
+            }
+        ]
+        
+    }
+    */
     // Add more projects as needed
 };
