@@ -198,30 +198,43 @@ const projectData = {
         ]
     },
     'game4': {
-        title: 'RPG Adventure',
-        subtitle: 'Action RPG Game',
+        title: 'High Noon',
+        subtitle: 'Western Standoff Game',
         description: `
-            <p>An action RPG featuring character customization, dynamic combat, and procedurally generated dungeons.</p>
-            <p>More details about the game development and features here.</p>
+            <p>
+            A one versus one western standoff game where the players do different speed based minigames. 
+            These minigames range from typeracers and buttonmashes, to shootingranges and log balancing.
+            The game was part of a course that had different periods to it. So we went from 3 people up to finally 8. 
+            Each period gave us new requirments to fullfill such as alternate controllers!
+            The course also introduced a strict hierarchy where labour had to be ditributed from the leader of the project. 
+            The leader was the only one who had contact with the professor of the course as well
+            </p>
+            <br></br>
+            <h3>My Part</h3>
+            <p
+            >My main responsibility was first of all to develop the Type Racer minigame. This was the main minigame of the game.
+            After that I got the responsibility of creating the aesthetics of the game. This included creating every map, working on post processing, sound, music and much more.
+            That is not really my area of expertise but I am very happy with what I accomplished; I made an interactive main menu, a bunch of different maps, created my first animations and much mmore!
+            </p>
         `,
         images: [
-            '/api/placeholder/600/400',
-            '/api/placeholder/600/400'
+            'images/HighNoon/gifOne.gif',
+            'images/HighNoon/gifTwo.gif'
         ],
         videos: [
             {
-                title: 'Gameplay Demo',
-                url: 'https://www.youtube.com/embed/YOUR_VIDEO_ID'
+                title: 'Typeracer Demo',
+                url: 'https://www.youtube.com/embed/ee7-tlgfgOo?si=gscHOZs1H_0xnhCW'
             }
         ],
         details: [
             {
                 title: 'Team Size',
-                content: '6 People'
+                content: '4 People'
             },
             {
                 title: 'Development Time',
-                content: '12 Weeks'
+                content: '3 Weeks'
             },
             {
                 title: 'Engine',
@@ -229,11 +242,11 @@ const projectData = {
             },
             {
                 title: 'Platform',
-                content: 'PC, Mobile'
+                content: 'PC'
             },
             {
                 title: 'Role',
-                content: 'Game Programmer'
+                content: 'Game Programmer & Level Designer'
             }
         ],
         links: [
