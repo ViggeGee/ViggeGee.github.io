@@ -12,6 +12,37 @@
     <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
+
+    <script>
+        // Hero section animation effects
+        document.addEventListener('DOMContentLoaded', function() {
+    const heroSection = document.querySelector('.hero');
+    
+    // Create pixels
+    for (let i = 0; i < 150; i++) {
+        const pixel = document.createElement('div');
+        pixel.className = 'hero-pixel';
+        
+        pixel.style.left = `${Math.random() * 100}%`;
+        pixel.style.top = `${Math.random() * 100}%`;
+        
+        const size = 3 + Math.random() * 8;
+        pixel.style.width = `${size}px`;
+        pixel.style.height = `${size}px`;
+        
+        pixel.style.animationDelay = `${Math.random() * 5}s`;
+        pixel.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+        
+        heroSection.appendChild(pixel);
+    }
+    
+    // Add CSS for pixels
+    const style = document.createElement('style');
+    document.head.appendChild(style);
+    });
+        </script>
+
+
     <header>
         <nav class="navbar">
             <div class="nav-container">
@@ -59,6 +90,24 @@
                         And lastly by taking part in multiple Game Jam, as well as participating in multiple playtests for different companies.
                         Do you want to know more? You can find my contact information at the bottom. 
                      </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="fade-in">
+            <h2>SKILLS & EXPERTISE</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    
+                    <div class="skill-grid">
+                        <div class="skill-tag">C#</div>
+                        <div class="skill-tag">C++</div>
+                        <div class="skill-tag">Unity</div>
+                        <div class="skill-tag">Unreal Engine</div>
+                        <div class="skill-tag">Maya</div>
+                        <div class="skill-tag">HTML & CSS</div>
+                        <div class="skill-tag">SQL</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -144,6 +193,69 @@
                 </div>
             </div>
         </section>
+
+        <section id="technical" class="fade-in">
+            <h2>TECHNICAL PROJECTS</h2>
+            <div class="projects-grid">
+                <!-- PCG Project -->
+                <div class="project-card" data-project="pcg-project">
+                    <div class="project-image">
+                        <img src="images/pcg/header.jpg" alt="Procedural Content Generation">
+                    </div>
+                    <div class="project-info">
+                        <h3>Procedural Content Generation</h3>
+                        <p>
+                            UNDER CONSTRUCTION
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fas fa-code"></i> C#</span>
+                            <span class="tag"><i class="fas fa-code"></i> UNITY</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 8 Weeks</span>
+                            <span class="tag"><i class="fas fa-microchip"></i> DFS, Perlin Noise, e.g </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Physics Engine Project -->
+                <div class="project-card" data-project="physics-engine">
+                    <div class="project-image">
+                        <img src="images/physics/header.jpg" alt="2D Physics Engine">
+                    </div>
+                    <div class="project-info">
+                        <h3>2D Physics Engine</h3>
+                        <p>
+                            UNDER CONSTRUCTION
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fas fa-code"></i> C#</span>
+                            <span class="tag"><i class="fas fa-code"></i> UNITY</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 4 Weeks</span>
+                            <span class="tag"><i class="fas fa-users"></i> Team: 2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="physics-engine">
+                    <div class="project-image">
+                        <img src="images/physics/header.jpg" alt="2D Physics Engine">
+                    </div>
+                    <div class="project-info">
+                        <h3>Computer Graphics Programming</h3>
+                        <p>
+                            UNDER CONSTRUCTION
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fas fa-code"></i> C++</span>
+                            <span class="tag"><i class="fas fa-code"></i> HLSL</span>
+                            <span class="tag"><i class="fas fa-clock"></i> 12 Weeks</span>
+                            <span class="tag"><i class="fas fa-users"></i> Team: Solo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3. Skills Section to be added to index.html -->
+        
         
         <section id="smaller" class="fade-in">
             <h2>SMALLER GAMES & JAMS</h2>
@@ -282,3 +394,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+        
