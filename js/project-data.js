@@ -35,6 +35,8 @@ const projectData = {
                 I made it together with a team of 7 for our final University Project.
                 It's a 2 player co-op arena game similar to games like Vampire Survivor 
                 but with the twist of you being chained together with your friend!
+
+                The game is available on Steam and uses its Remote play for multiplayer! 
             </p>
             <br></br>
             <h3>My Part</h3>
@@ -66,7 +68,7 @@ const projectData = {
             },
             {
                 title: 'Development Time',
-                content: '10 Weeks'
+                content: '20 Weeks'
             },
             {
                 title: 'Engine',
@@ -83,7 +85,7 @@ const projectData = {
         ],
         links: [
             {
-                text: 'PLAY GAME',
+                text: 'PLAY GAME ON STEAM',
                 url: 'https://store.steampowered.com/app/3307300/Chained_2_Violence/'
             }
         ]
@@ -121,7 +123,7 @@ const projectData = {
             },
             {
                 title: 'Development Time',
-                content: '1 Week'
+                content: '3 Weeks'
             },
             {
                 title: 'Engine',
@@ -175,7 +177,7 @@ const projectData = {
             },
             {
                 title: 'Development Time',
-                content: '8 Weeks'
+                content: '12 Weeks'
             },
             {
                 title: 'Engine',
@@ -234,7 +236,7 @@ const projectData = {
             },
             {
                 title: 'Development Time',
-                content: '3 Weeks'
+                content: '5 Weeks'
             },
             {
                 title: 'Engine',
@@ -276,6 +278,13 @@ const projectData = {
             'images/HackerXPerience/imageOne.png',
             'images/HackerXPerience/imageTwo.png',
             'images/HackerXPerience/imageThree.png'
+        ],
+
+        videos: [
+            {
+            title: 'Gameplay demo',
+            url: 'https://www.youtube.com/embed/Mj9edNXO9xA?si=5iMQpPHpHXciY3WM'
+            }
         ],
         details: [
             {
