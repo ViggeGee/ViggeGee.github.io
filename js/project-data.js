@@ -271,9 +271,9 @@ const projectData = {
             </p>
         `,
         images: [
-            'images/pcg/bsp.png',
-            'images/pcg/perlin.png',
-            'images/pcg/chained2violence.gif'
+            'Images/pcg/bsp.png',
+            'Images/pcg/perlin.png',
+            'Images/pcg/chained2violence.gif'
         ],
         details: [
             {
@@ -297,8 +297,8 @@ const projectData = {
            </p>
         `,
         images: [
-            'images/physics/gifOne.gif',
-            'images/physics/gifTwo.gif'
+            'Images/physics/gifOne.gif',
+            'Images/physics/gifTwo.gif'
         ],
         details: [
             {
