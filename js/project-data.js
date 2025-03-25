@@ -258,6 +258,69 @@ const projectData = {
             }
         ]
     },
+    'pcg-project': {
+        title: 'Procedural Content Generation',
+        subtitle: ' ',
+        description: `
+            <p>
+            I have been very interested in PCG content and taken every opportunity that I could to extend my knowledge within the area
+            I took a course att Malmö University about PCG. There I created an adaptive Dungeon Generator using algorithms such as Binary Space Partitioning and Cellular Automata. 
+            I also created my own algorithm for Perlin Noise that creates terrain generation and more.
+            In the game Chained 2 Violence I also created a procedural enemy generator, which was very inspired by how borderlands generates their weapons.
+            It generates the enemies based on the current era of the game, the class of the enemy etc. It makes it so the enemies always are coherent to the game but still always manages to feel unique.
+            </p>
+        `,
+        images: [
+            'images/pcg/bsp.png',
+            'images/pcg/perlin.png',
+            'images/pcg/chained2violence.gif'
+        ],
+        details: [
+            {
+                title: 'Engine',
+                content: 'Unity, C#'
+            },
+            {
+                title: 'Technologies',
+                content: 'BSP, Cellular Automata, Perlin Noise'
+            }
+            
+        ]
+    },
+    'physics-engine': {
+        title: 'Physics Engine',
+        subtitle: ' ',
+        description: `
+            <p>
+           For a school assignment I created a Physics Engine in Unity covering some of the fundamental building blocks. 
+           i.e., a software system that manages forces, time integration, collisions, and other concepts related to physics in games.
+           </p>
+        `,
+        images: [
+            'images/physics/gifOne.gif',
+            'images/physics/gifTwo.gif'
+        ],
+        details: [
+            {
+                title: 'Engine',
+                content: 'Unity, C#'
+            },
+            {
+                title: 'Technologies',
+                content: 'Buoyancy, Wind, Collision, Ballistic Trajectory'
+            }
+            
+
+            
+            
+        ],
+        links: [
+            {
+                text: 'PLAY GAME',
+                url: 'https://github.com/ViggeGee/PhysicsProjVT24'
+            }
+        ]
+    },
     'Hacker-XPerience': {
         title: 'Hacker-XPerience',
         subtitle: 'Game Jam Entry 2024',
@@ -356,8 +419,8 @@ const projectData = {
             }
         ]
         
-    }
-    /*
+    },
+    
     'Janitor Life': {
         title: 'Janitor Life',
         subtitle: 'Game Jam Entry 2024',
@@ -406,6 +469,6 @@ const projectData = {
         ]
         
     }
-    */
+    
     // Add more projects as needed
 };
