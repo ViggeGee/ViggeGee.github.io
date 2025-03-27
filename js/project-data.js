@@ -321,6 +321,55 @@ const projectData = {
             }
         ]
     },
+    'computer-graphics': {
+        title: 'Computer Graphics',
+        subtitle: ' ',
+        description: `
+            <p>
+            This project is a 3D renderer built with DirectX 11. My task was to work on this framework that in the beginning just imported the models.
+            I started by implementing diffuse maps to give everything textures, then adding a phong shader to give it all realistic lightning.
+            This introduces some linear algebra to the project. After that I implemented normal mapping and cube mapping to give the textures depth.
+            I also worked on implementing different filtering methods like anisotropic and generating mipmap textures.
+            </p>
+            <br> </br>
+            <p>
+            The different images features Phong, Normal mapping, Cubemap, Diffuse, and lastly everything put together!
+            </p>
+        `,
+        images: [
+            'Images/eduRend/Phong.png',
+            'Images/eduRend/NormalMap.png',
+            'Images/eduRend/CubeMap.png',
+            'Images/eduRend/Diffuse.png',
+            'Images/eduRend/Everything.png'
+        ],
+        videos: [
+            {
+                title: 'Completed Project',
+                url: 'Images/eduRend/DemoGif.gif'
+            }
+        ],
+        details: [
+            {
+                title: 'Engine',
+                content: 'DirectX 11, HLSL, C++'
+            },
+            {
+                title: 'Technologies',
+                content: 'Phong Shading, Normal Map, Cubemap, Diffuse, Mip map, Anisotropic filtering'
+            }
+            
+
+            
+            
+        ],
+        links: [
+            {
+                text: 'PLAY GAME',
+                url: 'https://github.com/ViggeGee/PhysicsProjVT24'
+            }
+        ]
+    },
     'Hacker-XPerience': {
         title: 'Hacker-XPerience',
         subtitle: 'Game Jam Entry 2024',
