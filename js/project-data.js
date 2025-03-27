@@ -316,7 +316,7 @@ const projectData = {
         ],
         links: [
             {
-                text: 'PLAY GAME',
+                text: 'VIEW CODE',
                 url: 'https://github.com/ViggeGee/PhysicsProjVT24'
             }
         ]
@@ -330,10 +330,12 @@ const projectData = {
             I started by implementing diffuse maps to give everything textures, then adding a phong shader to give it all realistic lightning.
             This introduces some linear algebra to the project. After that I implemented normal mapping and cube mapping to give the textures depth.
             I also worked on implementing different filtering methods like anisotropic and generating mipmap textures.
+            Future work would be to introduce Alpha transparency for the plants in the scene to make them look more realistic
             </p>
             <br> </br>
             <p>
             The different images features Phong, Normal mapping, Cubemap, Diffuse, and lastly everything put together!
+            
             </p>
         `,
         images: [
@@ -365,8 +367,8 @@ const projectData = {
         ],
         links: [
             {
-                text: 'PLAY GAME',
-                url: 'https://github.com/ViggeGee/PhysicsProjVT24'
+                text: 'VIEW CODE',
+                url: 'https://github.com/ViggeGee/eduRend'
             }
         ]
     },
